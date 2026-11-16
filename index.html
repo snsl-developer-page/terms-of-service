@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Terms of Service</title>
+<meta name="description" content="Terms of Service governing the use of this Android gallery and file management application.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+<style>
+:root {
+  --bg: #f5f5f7;
+  --surface: rgba(255,255,255,.82);
+  --text: #1d1d1f;
+  --muted: #86868b;
+  --blue: #007aff;
+  --green: #34a853;
+  --border: rgba(0,0,0,.07);
+  --shadow: 0 4px 24px rgba(0,0,0,.035);
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+          "SF Pro Text", Inter, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0 20px;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.55;
+  letter-spacing: -.02em;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Navigation */
+
+.site {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  margin: 0 -20px;
+  padding: 0 20px;
+  background: rgba(245,245,247,.88);
+  border-bottom: 1px solid transparent;
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  transition: border-color .2s;
+}
+
+.site.scrolled {
+  border-bottom-color: var(--border);
+}
+
+.site-in {
+  max-width: 900px;
+  margin: auto;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.chips::-webkit-scrollbar {
+  display: none;
+}
+
+.chips a {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 15px;
+  border-radius: 999px;
+  color: #626267;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s ease, color .2s ease;
+}
+
+.chips a:hover {
+  color: #1d1d1f;
+  background: rgba(0,0,0,.045);
+}
+
+.chips a.active {
+  color: #007aff;
+  background: rgba(0,122,255,.12);
+  font-weight: 600;
+}
+
+.chips a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* Main */
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 0 70px;
+}
+
+/* Hero */
+
+.hero {
+  padding: 65px 20px 45px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tag-line {
+  margin: 0 0 14px;
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: clamp(42px, 8vw, 58px);
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -.045em;
+}
+
+.intro {
+  max-width: 620px;
+  margin: 0 auto 22px;
+  color: #626267;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 13px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,.75);
+  color: #626267;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.badge b {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+/* Summary */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin: 24px 0 48px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.stats div {
+  padding: 22px 16px;
+  text-align: center;
+}
+
+.stats div + div {
+  border-left: 1px solid var(--border);
+}
+
+.stats b {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -.04em;
+}
+
+.stats small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Sections */
+
+.sec {
+  margin: 48px 0;
+  scroll-margin-top: 100px;
+}
+
+.sec-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 4px 16px;
+}
+
+.sec-head h2 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -.035em;
+}
+
+.glyph {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(0,122,255,.09);
+  color: var(--blue);
+}
+
+.glyph svg {
+  width: 19px;
+  height: 19px;
+}
+
+.lead {
+  margin: 0 4px 18px;
+  color: #626267;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Cards */
+
+.card {
+  margin: 18px 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 19px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: -3px;
+  border-radius: 20px;
+}
+
+.chev {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  margin-left: auto;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(-45deg);
+  transition: transform .2s;
+}
+
+details[open] .chev {
+  transform: rotate(45deg);
+}
+
+.body {
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--border);
+}
+
+.body p {
+  margin: 0;
+  color: #515157;
+}
+
+/* Content tiles */
+
+.bento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.tile {
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.tile p {
+  margin: 12px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.tile .ti {
+  width: 30px;
+  height: 30px;
+  color: #77777d;
+}
+
+.tile.wide {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.tile.wide p {
+  margin: 0;
+}
+
+.tile.wide .ti {
+  flex: none;
+}
+
+.tile strong {
+  font-weight: 600;
+}
+
+/* Important notes */
+
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid rgba(0,122,255,.12);
+  border-radius: 18px;
+  background: rgba(0,122,255,.045);
+}
+
+.notice svg {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  color: var(--blue);
+}
+
+.notice p {
+  margin: 0;
+  color: #515157;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* List */
+
+.list {
+  margin: 0;
+  padding-left: 22px;
+  color: #515157;
+}
+
+.list li {
+  margin: 10px 0;
+  padding-left: 5px;
+}
+
+/* Contact */
+
+.cta {
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.cta p {
+  margin: 0 0 18px;
+  color: #626267;
+  font-size: 16px;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--blue);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+
+.cta a:hover {
+  opacity: .85;
+}
+
+/* Footer */
+
+footer {
+  padding: 30px 0 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Responsive */
+
+@media(max-width:760px) {
+  .site-in {
+    min-height: 60px;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 5px;
+  }
+
+  .site .chips {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 8px 0 12px;
+  }
+}
+
+@media(max-width:560px) {
+  body {
+    padding: 0 16px;
+  }
+
+  .site {
+    margin: 0 -16px;
+    padding: 0 16px;
+  }
+
+  .chips {
+    gap: 3px;
+  }
+
+  .chips a {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 42px 8px 32px;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  .intro {
+    font-size: 16px;
+  }
+
+  .bento,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stats div {
+    padding: 15px;
+  }
+
+  .stats div + div {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .sec-head h2 {
+    font-size: 22px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site" id="nav">
+  <div class="site-in">
+    <nav class="chips" id="chips" aria-label="Terms of Service sections">
+      <a href="#s1">Acceptance</a>
+      <a href="#s2">App Usage</a>
+      <a href="#s3">Permissions</a>
+      <a href="#s4">Your Files</a>
+      <a href="#s6">Disclaimer</a>
+      <a href="#s9">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+
+  <p class="tag-line">Terms &amp; Conditions</p>
+
+  <h1>Terms of Service</h1>
+
+  <p class="intro">
+    Please read these Terms of Service carefully before using the App.
+    By downloading, installing, or using the App, you agree to these terms.
+  </p>
+
+  <span class="badge">
+    <b></b>
+    Effective Date: November 17, 2026
+  </span>
+
+</section>
+
+<main>
+
+  <div class="stats">
+
+    <div>
+      <b>Offline</b>
+      <small>Local media management</small>
+    </div>
+
+    <div>
+      <b>You</b>
+      <small>Own and control your files</small>
+    </div>
+
+    <div>
+      <b>Free</b>
+      <small>Personal use license</small>
+    </div>
+
+  </div>
+
+  <!-- 1. Acceptance -->
+
+  <section class="sec" id="s1">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 12l2 2 4-4"/>
+          <circle cx="12" cy="12" r="9"/>
+        </svg>
+      </span>
+      <h2>1. Acceptance of Terms</h2>
+    </div>
+
+    <p class="lead">
+      These Terms of Service ("Terms") govern your access to and use of
+      this Android application ("App").
+    </p>
+
+    <div class="card">
+      <div class="body">
+        <p>
+          By installing, accessing, or using the App, you acknowledge
+          that you have read, understood, and agreed to these Terms.
+          If you do not agree with any part of these Terms, you should
+          discontinue using and uninstall the App.
+        </p>
+        <br>
+        <p>
+          These Terms apply to all users who download, install, or use
+          the App.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 2. App Usage -->
+
+  <section class="sec" id="s2">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8">
+          <rect x="5" y="2" width="14" height="20" rx="3"/>
+          <path d="M9 18h6"/>
+        </svg>
+      </span>
+      <h2>2. Description of the App</h2>
+    </div>
+
+    <p class="lead">
+      The App provides tools to browse, organize, view, and manage
+      photos, videos, and other files stored on your Android device.
+    </p>
+
+    <div class="bento">
+
+      <div class="tile">
+        <svg class="ti" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.8">
+          <rect x="3" y="4" width="18" height="16" rx="3"/>
+          <circle cx="9" cy="10" r="1.8"/>
+          <path d="M21 16l-5-5-8 9"/>
+        </svg>
+        <p>
+          <strong>Gallery:</strong>
+          Browse and view photos, videos, and other supported media.
+        </p>
+      </div>
+
+      <div class="tile">
+        <svg class="ti" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.8">
+          <path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+        </svg>
+        <p>
+          <strong>File Management:</strong>
+          Organize, copy, move, rename, and delete files.
+        </p>
+      </div>
+
+      <div class="tile wide">
+        <svg class="ti" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.8">
+          <rect x="4" y="11" width="16" height="10" rx="2"/>
+          <path d="M8 11V7a4 4 0 018 0v4"/>
+        </svg>
+        <p>
+          <strong>Vault:</strong>
+          Store selected files in the App's private storage area,
+          subject to the limitations described in these Terms.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="notice">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.8">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 11v5M12 8h.01"/>
+      </svg>
+      <p>
+        Features may change, be improved, or become unavailable as
+        the App is updated. We do not guarantee that every feature
+        will remain available on every device or Android version.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- 3. Permissions -->
+
+  <section class="sec" id="s3">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8">
+          <rect x="4" y="11" width="16" height="10" rx="2"/>
+          <path d="M8 11V7a4 4 0 018 0v4"/>
+        </svg>
+      </span>
+      <h2>3. Device Permissions</h2>
+    </div>
+
+    <p class="lead">
+      To provide its features, the App may request access to certain
+      files, folders, and media stored on your device.
+    </p>
+
+    <div class="card">
+      <div class="body">
+        <p>
+          You are responsible for reviewing and granting the permissions
+          required by the App. Some features may not work correctly if
+          the necessary permissions are denied or revoked.
+        </p>
+        <br>
+        <p>
+          The App uses storage and media permissions to provide its
+          gallery and file management functionality, including viewing,
+          organizing, moving, copying, renaming, and deleting files.
+        </p>
+        <br>
+        <p>
+          You may manage or revoke permissions through your Android
+          device settings. Revoking permissions may limit certain
+          features or prevent them from working.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 4. Your Files -->
+
+  <section class="sec" id="s4">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8">
+          <path d="M12 3v12m-4-4l4 4 4-4"/>
+          <path d="M4 17v3h16v-3"/>
+        </svg>
+      </span>
+      <h2>4. Your Files and Content</h2>
+    </div>
+
+    <p class="lead">
+      You retain ownership of the photos, videos, and other files
+      stored on your device. The App does not claim ownership of
+      your personal content.
+    </p>
+
+    <div class="card">
+      <div class="body">
+
+        <p>
+          You are solely responsible for the files and content you
+          access, manage, edit, copy, move, or delete using the App.
+        </p>
+
+        <br>
+
+        <p>
+          Before performing operations that may modify or remove files,
+          you should ensure that you have appropriate backups of any
+          important content.
+        </p>
+
+        <br>
+
+        <p>
+          You must have the necessary rights or authorization to
+          access and manage any files or media using the App.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="notice">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.8">
+        <path d="M12 3l9 17H3z"/>
+        <path d="M12 9v5M12 17h.01"/>
+      </svg>
+      <p>
+        Deleting, moving, or modifying files may result in permanent
+        changes or data loss. Always verify your selections before
+        confirming file operations.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- 5. Vault -->
+
+  <section class="sec" id="s5">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8">
+          <rect x="4" y="11" width="16" height="10" rx="2"/>
+          <path d="M8 11V7a4 4 0 018 0v4"/>
+        </svg>
+      </span>
+      <h2>5. Vault Feature</h2>
+    </div>
+
+    <p class="lead">
+      The Vault feature allows you to move selected files into
+      the App's private internal storage.
+    </p>
+
+    <div class="card">
+      <div class="body">
+
+        <p>
+          Files moved into the Vault may no longer appear in your
+          regular gallery or file manager because they are stored
+          in the App's private storage area.
+        </p>
+
+        <br>
+
+        <p>
+          You are responsible for remembering how to access your
+          Vault and managing the files stored there.
+        </p>
+
+        <br>
+
+        <p>
+          Vault files may be permanently lost if you uninstall the App,
+          clear its data, reset your device, or otherwise remove the
+          App's private storage. We may not be able to recover these files.
+        </p>
+
+        <br>
+
+        <p>
+          The Vault feature should not be treated as a backup service
+          or a guarantee of permanent data storage.
+        </p>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 6. Acceptable Use -->
+
+  <section class="sec" id="s6">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8">
+          <path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+      </span>
+      <h2>6. Acceptable Use</h2>
+    </div>
+
+    <p class="lead">
+      You agree to use the App responsibly and in accordance
+      with applicable laws and regulations.
+    </p>
+
+    <div class="card">
+      <div class="body">
+
+        <p>You agree not to:</p>
+
+        <ul class="list">
+          <li>Use the App for unlawful purposes or activities.</li>
+          <li>Use the App to access or manage files without proper authorization.</li>
+          <li>Attempt to reverse engineer, decompile, or modify the App except where permitted by applicable law.</li>
+          <li>Distribute, resell, or commercially exploit the App without authorization.</li>
+          <li>Interfere with the normal operation, security, or functionality of the App.</li>
+          <li>Use the App in a way that violates the rights of other individuals or organizations.</li>
+        </ul>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 7. Disclaimer -->
+
+  <section class="sec" id="s7">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 11v5M12 8h.01"/>
+        </svg>
+      </span>
+      <h2>7. Disclaimer of Warranties</h2>
+    </div>
+
+    <div class="card">
+      <div class="body">
+
+        <p>
+          The App is provided on an "AS IS" and "AS AVAILABLE" basis,
+          without warranties of any kind, to the maximum extent
+          permitted by applicable law.
+        </p>
+
+        <br>
+
+        <p>
+          We do not guarantee that the App will always be available,
+          uninterrupted, error-free, compatible with every device,
+          or free from defects.
+        </p>
+
+        <br>
+
+        <p>
+          We do not guarantee that file operations will always
+          complete successfully or that files can always be recovered
+          after deletion, modification, device failure, or application
+          removal.
+        </p>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 8. Limitation of Liability -->
+
+  <section class="sec" id="s8">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8">
+          <path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3z"/>
+        </svg>
+      </span>
+      <h2>8. Limitation of Liability</h2>
+    </div>
+
+    <div class="card">
+      <div class="body">
+
+        <p>
+          To the maximum extent permitted by applicable law, we shall
+          not be liable for any indirect, incidental, special,
+          consequential, or punitive damages arising from your use
+          of or inability to use the App.
+        </p>
+
+        <br>
+
+        <p>
+          This includes, without limitation, loss of photos, videos,
+          files, data, or other content resulting from file operations,
+          device malfunction, operating system changes, application
+          updates, uninstallation, or other circumstances beyond
+          our reasonable control.
+        </p>
+
+        <br>
+
+        <p>
+          Nothing in these Terms excludes or limits liability that
+          cannot legally be excluded or limited under applicable law.
+        </p>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 9. Updates and Changes -->
+
+  <section class="sec" id="s9">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8">
+          <path d="M21 12a9 9 0 11-3-6.7M21 4v5h-5"/>
+        </svg>
+      </span>
+      <h2>9. Updates and Changes to the App</h2>
+    </div>
+
+    <div class="card">
+      <div class="body">
+
+        <p>
+          We may release updates, improvements, bug fixes, or changes
+          to the App from time to time.
+        </p>
+
+        <br>
+
+        <p>
+          Updates may modify existing features, introduce new features,
+          or remove features where necessary.
+        </p>
+
+        <br>
+
+        <p>
+          We recommend keeping the App updated to the latest available
+          version to benefit from improvements and compatibility fixes.
+        </p>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 10. Termination -->
+
+  <section class="sec" id="s10">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8">
+          <path d="M4 7h16M10 11v6M14 11v6"/>
+          <path d="M6 7l1 14h10l1-14M9 7V4h6v3"/>
+        </svg>
+      </span>
+      <h2>10. Termination</h2>
+    </div>
+
+    <div class="card">
+      <div class="body">
+
+        <p>
+          You may stop using the App at any time by uninstalling it
+          from your device.
+        </p>
+
+        <br>
+
+        <p>
+          We reserve the right to discontinue, suspend, or modify
+          the App or any of its features at any time, subject to
+          applicable law.
+        </p>
+
+        <br>
+
+        <p>
+          Uninstalling the App may permanently delete files stored
+          in its private internal storage, including files in the Vault.
+          Please export or move important files before uninstalling.
+        </p>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 11. Governing Law -->
+
+  <section class="sec" id="s11">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8">
+          <path d="M12 3v18M5 7h14M5 7l-3 6h6zM19 7l-3 6h6zM8 21h8"/>
+        </svg>
+      </span>
+      <h2>11. Governing Law</h2>
+    </div>
+
+    <div class="card">
+      <div class="body">
+        <p>
+          These Terms shall be interpreted and applied in accordance
+          with the applicable laws and regulations of the jurisdiction
+          in which the App is legally operated, without regard to
+          conflict-of-law principles.
+        </p>
+        <br>
+        <p>
+          Any disputes arising from these Terms shall be handled
+          by the competent authorities or courts as permitted
+          by applicable law.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 12. Changes to Terms -->
+
+  <section class="sec" id="s12">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8">
+          <path d="M12 3v18M3 12h18"/>
+        </svg>
+      </span>
+      <h2>12. Changes to These Terms</h2>
+    </div>
+
+    <div class="card">
+      <div class="body">
+        <p>
+          We may update these Terms from time to time to reflect
+          changes to the App, its features, or applicable legal
+          requirements.
+        </p>
+        <br>
+        <p>
+          Updated Terms will be published on this page with a revised
+          effective date. Your continued use of the App after the
+          updated Terms become effective constitutes acceptance
+          of the revised Terms, to the extent permitted by law.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 13. Contact -->
+
+  <section class="sec" id="s13">
+
+    <div class="sec-head">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <path d="M3 7l9 6 9-6"/>
+        </svg>
+      </span>
+      <h2>13. Contact Us</h2>
+    </div>
+
+    <div class="cta">
+
+      <p>
+        If you have any questions, concerns, or requests regarding
+        these Terms of Service, please contact us:
+      </p>
+
+      <a href="mailto:support.developer@gmail.com">
+        Email: support.developer@gmail.com
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer>
+    Terms of Service · Effective November 17, 2026
+  </footer>
+
+</main>
+
+<script>
+(function() {
+
+  const nav = document.getElementById('nav');
+  const links = [...document.querySelectorAll('#chips a')];
+
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const map = {};
+
+  links.forEach(link => {
+    map[link.getAttribute('href').slice(1)] = link;
+  });
+
+  const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+      if (!entry.isIntersecting) return;
+
+      links.forEach(link => link.classList.remove('active'));
+
+      const link = map[entry.target.id];
+
+      if (link) {
+        link.classList.add('active');
+
+        const container = link.parentNode;
+
+        container.scrollTo({
+          left: link.offsetLeft - container.offsetLeft - 16,
+          behavior: 'smooth'
+        });
+      }
+
+    });
+
+  }, {
+    rootMargin: '-120px 0px -60% 0px'
+  });
+
+  Object.keys(map).forEach(id => {
+    const element = document.getElementById(id);
+    if (element) observer.observe(element);
+  });
+
+})();
+</script>
+
+</body>
+</html>
